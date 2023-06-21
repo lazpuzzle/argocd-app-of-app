@@ -16,11 +16,13 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
         resources:
           limits:
-            memory: "10Mi"
-            cpu: "100m"
+            memory: "50Mi"
+            cpu: "500m"
           requests:
             memory: "10Mi"
             cpu: "100m"
