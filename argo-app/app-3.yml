@@ -14,3 +14,9 @@ spec:
     path: my-apps/app-3
     repoURL: https://github.com/lazpuzzle/argocd-app-of-app.git
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
